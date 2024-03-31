@@ -1,8 +1,14 @@
 const express = require("express");
 const pug = require("pug");
 const dotenv = require("dotenv");
+const mongoose = require("mongoose");
 
 dotenv.config();
+
+const mongodb_uri = process.env.MONGODB_URI;
+
+mongoose.connect(mongodb_uri);
+
 const app = express();
 const port = process.env.PORT;
 

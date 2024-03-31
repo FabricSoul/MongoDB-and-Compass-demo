@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  include partials/nav
+
+  .container
+    .row
+      .col
+        h1 Form Submission Successful
+        p Here is the list of submitted users:
+
+        ul
+          each user in users
+            li
+              span #{user.name} - #{user.email}
+              form(action=`/update-user/${user._id}?_method=PUT`, method="POST")
+                input(type="text", name="name", value=user.name)
+                input(type="email", name="email", value=user.email)
+                button(type="submit") Update
+              form(action=`/delete-user/${user._id}?_method=DELETE`, method="POST")
+                button(type="submit") Delete

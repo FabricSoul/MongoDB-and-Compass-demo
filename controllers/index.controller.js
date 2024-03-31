@@ -7,3 +7,6 @@ exports.aboutView = (req, res) => {
 exports.formView = (req, res) => {
   res.render("pages/form", { title: "form", active: "from" });
 };
+exports.formSuccessView = (req, res) => {
+  res.render("pages/form-success", { title: "Form Success", active: "form" });
+};
