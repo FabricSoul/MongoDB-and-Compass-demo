@@ -1,0 +1,12 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-custom
+  a.navbar-brand(href='/') My Website
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    ul.navbar-nav
+      li.nav-item(class=active === 'home' ? 'active' : '')
+        a.nav-link(href='/') Home
+      li.nav-item(class=active === 'about' ? 'active' : '')
+        a.nav-link(href='/about') About
+      li.nav-item(class=active === 'form' ? 'active' : '')
+        a.nav-link(href='/form') Form

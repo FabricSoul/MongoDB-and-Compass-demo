@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  include partials/nav
+  .container
+    .row
+      .col
+        h1 Contact Us
+        p Please fill in the form to contact us.
+        form(method="POST", action="/submit-form")
+          .form-group
+            label(for="name") Name:
+            input#name.form-control(type="text", name="name", required=true)
+          .form-group
+            label(for="email") Email:
+            input#email.form-control(type="email", name="email", required=true)
+          .form-group
+            label(for="age") Age:
+            input#age.form-control(type="number", name="age", required=true)
+          .form-group
+            label(for="street") Street:
+            input#street.form-control(type="text", name="address[street]")
+          .form-group
+            label(for="city") City:
+            input#city.form-control(type="text", name="address[city]")
+          .form-group
+            label(for="state") State:
+            input#state.form-control(type="text", name="address[state]")
+          .form-group
+            label(for="zip") Zip Code:
+            input#zip.form-control(type="text", name="address[zip]")
+          button.btn.btn-primary(type="submit") Submit
